@@ -63,7 +63,7 @@ int main()
     glfwSetScrollCallback(window, scroll_callback);
 
     // tell GLFW to capture our mouse
-    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    // glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     // glad: load all OpenGL function pointers
     // ---------------------------------------
@@ -79,7 +79,7 @@ int main()
 
     // build and compile shaders
     // -------------------------
-    Shader shader("1.2.pbr.vs", "1.2.pbr.fs");
+    Shader shader("src/6.pbr/1.2.lighting_textured/1.2.pbr.vs", "src/6.pbr/1.2.lighting_textured/1.2.pbr.fs");
 
     shader.use();
     shader.setInt("albedoMap", 0);
@@ -90,11 +90,11 @@ int main()
 
     // load PBR material textures
     // --------------------------
-    unsigned int albedo    = loadTexture(FileSystem::getPath("resources/textures/pbr/rusted_iron/albedo.png").c_str());
-    unsigned int normal    = loadTexture(FileSystem::getPath("resources/textures/pbr/rusted_iron/normal.png").c_str());
-    unsigned int metallic  = loadTexture(FileSystem::getPath("resources/textures/pbr/rusted_iron/metallic.png").c_str());
-    unsigned int roughness = loadTexture(FileSystem::getPath("resources/textures/pbr/rusted_iron/roughness.png").c_str());
-    unsigned int ao        = loadTexture(FileSystem::getPath("resources/textures/pbr/rusted_iron/ao.png").c_str());
+    unsigned int albedo    = loadTexture("resources/textures/pbr/rusted_iron/albedo.png");
+    unsigned int normal    = loadTexture("resources/textures/pbr/rusted_iron/normal.png");
+    unsigned int metallic  = loadTexture("resources/textures/pbr/rusted_iron/metallic.png");
+    unsigned int roughness = loadTexture("resources/textures/pbr/rusted_iron/roughness.png");
+    unsigned int ao        = loadTexture("resources/textures/pbr/rusted_iron/ao.png");
 
     // lights
     // ------

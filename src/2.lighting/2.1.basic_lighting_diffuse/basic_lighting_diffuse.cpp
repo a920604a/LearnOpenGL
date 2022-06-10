@@ -61,7 +61,7 @@ int main()
     glfwSetScrollCallback(window, scroll_callback);
 
     // tell GLFW to capture our mouse
-    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    // glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     // glad: load all OpenGL function pointers
     // ---------------------------------------
@@ -77,8 +77,8 @@ int main()
 
     // build and compile our shader zprogram
     // ------------------------------------
-    Shader lightingShader("src/2.lighting/2.basic_lighting_diffuse/2.1.basic_lighting.vs", "src/2.lighting/2.basic_lighting_diffuse/2.1.basic_lighting.fs");
-    Shader lightCubeShader("src/2.lighting/2.basic_lighting_diffuse/2.1.light_cube.vs", "src/2.lighting/2.basic_lighting_diffuse/2.1.light_cube.fs");
+    Shader lightingShader("src/2.lighting/2.1.basic_lighting_diffuse/2.1.basic_lighting.vs", "src/2.lighting/2.1.basic_lighting_diffuse/2.1.basic_lighting.fs");
+    Shader lightCubeShader("src/2.lighting/2.1.basic_lighting_diffuse/2.1.light_cube.vs", "src/2.lighting/2.1.basic_lighting_diffuse/2.1.light_cube.fs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------

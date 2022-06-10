@@ -63,7 +63,7 @@ int main()
     glfwSetScrollCallback(window, scroll_callback);
 
     // tell GLFW to capture our mouse
-    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    // glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     // glad: load all OpenGL function pointers
     // ---------------------------------------
@@ -79,7 +79,7 @@ int main()
 
     // build and compile shaders
     // -------------------------
-    Shader shader("1.1.pbr.vs", "1.1.pbr.fs");
+    Shader shader("src/6.pbr/1.1.lighting/1.1.pbr.vs", "src/6.pbr/1.1.lighting/1.1.pbr.fs");
 
     shader.use();
     shader.setVec3("albedo", 0.5f, 0.0f, 0.0f);

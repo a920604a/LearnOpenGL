@@ -63,7 +63,7 @@ int main()
     glfwSetScrollCallback(window, scroll_callback);
 
     // tell GLFW to capture our mouse
-    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    // glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     // glad: load all OpenGL function pointers
     // ---------------------------------------
@@ -80,9 +80,9 @@ int main()
 
     // build and compile shaders
     // -------------------------
-    Shader pbrShader("2.1.1.pbr.vs", "2.1.1.pbr.fs");
-    Shader equirectangularToCubemapShader("2.1.1.cubemap.vs", "2.1.1.equirectangular_to_cubemap.fs");
-    Shader backgroundShader("2.1.1.background.vs", "2.1.1.background.fs");
+    Shader pbrShader("src/6.pbr/2.1.1.ibl_irradiance_conversion/2.1.1.pbr.vs", "src/6.pbr/2.1.1.ibl_irradiance_conversion/2.1.1.pbr.fs");
+    Shader equirectangularToCubemapShader("src/6.pbr/2.1.1.ibl_irradiance_conversion/2.1.1.cubemap.vs", "src/6.pbr/2.1.1.ibl_irradiance_conversion/2.1.1.equirectangular_to_cubemap.fs");
+    Shader backgroundShader("src/6.pbr/2.1.1.ibl_irradiance_conversion/2.1.1.background.vs", "src/6.pbr/2.1.1.ibl_irradiance_conversion/2.1.1.background.fs");
 
 
     pbrShader.use();
@@ -127,7 +127,7 @@ int main()
     // ---------------------------------
     stbi_set_flip_vertically_on_load(true);
     int width, height, nrComponents;
-    float *data = stbi_loadf(FileSystem::getPath("resources/textures/hdr/newport_loft.hdr").c_str(), &width, &height, &nrComponents, 0);
+    float *data = stbi_loadf("resources/textures/hdr/newport_loft.hdr", &width, &height, &nrComponents, 0);
     unsigned int hdrTexture;
     if (data)
     {

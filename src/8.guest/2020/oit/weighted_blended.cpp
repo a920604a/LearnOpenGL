@@ -70,10 +70,10 @@ int main(int argc, char* argv[])
 
 	// build and compile shaders
 	// -------------------------
-	Shader solidShader("solid.vs", "solid.fs");
-	Shader transparentShader("transparent.vs", "transparent.fs");
-	Shader compositeShader("composite.vs", "composite.fs");
-	Shader screenShader("screen.vs", "screen.fs");
+	Shader solidShader("src/8.guest/2020/oit/solid.vs", "src/8.guest/2020/oit/solid.fs");
+	Shader transparentShader("src/8.guest/2020/oit/transparent.vs", "src/8.guest/2020/oit/transparent.fs");
+	Shader compositeShader("src/8.guest/2020/oit/composite.vs", "src/8.guest/2020/oit/composite.fs");
+	Shader screenShader("src/8.guest/2020/oit/screen.vs", "src/8.guest/2020/oit/screen.fs");
 
 	// set up vertex data (and buffer(s)) and configure vertex attributes
 	// ------------------------------------------------------------------
